@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Hakkımızda - Galatasaray</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="-100px" href="resimler/galatasaray.png">
+
+    <style>
+        @keyframes kutuGelis {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animasyonlu-kutu {
+            animation: kutuGelis 1s ease-out forwards;
+            background-color: #1a1a1a;
+            border: 1px solid #333;
+            border-radius: 12px;
+            color: white;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .animasyonlu-kutu:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 20px rgba(253, 185, 18, 0.3);
+        }
+
+        .kutu-resim {
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .istatistik-sayi {
+            font-size: 45px;
+            font-weight: bold;
+            color: #fdb912;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+
+<body style="background-color: #000000; color: white;">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
+        <div class="container">
+            <a class="navbar-brand" href="sayfa.html" style="color: #fdb912; font-weight: bold;">GALATASARAY</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Menüyü Aç/Kapat">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="sayfa.html">Ana Sayfa</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="hakkımızda.html">Hakkımızda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="galeri.html">Galeri</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="bilet.html">Bilet</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1 class="text-center mb-5" style="color: #fdb912;">Galatasaray Hakkında</h1>
+
+        <!-- İLK 3 KUTU: TARİHÇE VE BAŞARILAR -->
+        <div class="row g-4 mb-4">
+
+            <!-- KUTU 1 -->
+            <div class="col-md-4">
+                <div class="card animasyonlu-kutu p-3 h-100">
+                    <img src="resimler/resim1.jpg" class="card-img-top kutu-resim" alt="Kuruluş">
+                    <div class="card-body text-center">
+                        <h5 class="card-title mb-3" style="color: #a90429;">Şanlı Kuruluş</h5>
+                        <p class="card-text">
+                            1905 yılında Ali Sami Yen ve arkadaşları tarafından Mekteb-i Sultani'de kuruldu. Amacı Türk
+                            olmayan takımları yenmekti.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- KUTU 2 -->
+            <div class="col-md-4">
+                <div class="card animasyonlu-kutu p-3 h-100">
+                    <img src="resimler/resim2.jpg" class="card-img-top kutu-resim" alt="UEFA Kupası">
+                    <div class="card-body text-center">
+                        <h5 class="card-title mb-3" style="color: #a90429;">Avrupa Fatihi</h5>
+                        <p class="card-text">
+                            2000 yılında UEFA Kupası ve UEFA Süper Kupa'yı kazanarak Türk futbol tarihinin en büyük
+                            başarısına imza attı.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- KUTU 3 -->
+            <div class="col-md-4">
+                <div class="card animasyonlu-kutu p-3 h-100">
+                    <img src="resimler/resim3.jpg" class="card-img-top kutu-resim" alt="Desibel Rekoru">
+                    <div class="card-body text-center">
+                        <h5 class="card-title mb-3" style="color: #a90429;">Desibel Rekoru</h5>
+                        <p class="card-text">
+                            2011 yılında stadyumda taraftarın çıkardığı 131.76 desibellik ses ile Guinness Rekorlar
+                            Kitabı'na adını yazdırdı.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- İKİNCİ 3 KUTU: İSTATİSTİKLER VE SAYILAR -->
+        <div class="row g-4">
+
+            <!-- KUTU 4: Şampiyonluk -->
+            <div class="col-md-4">
+                <div class="card animasyonlu-kutu p-4 h-100 text-center">
+                    <div class="istatistik-sayi">24+</div>
+                    <h5 style="color: #a90429;">Süper Lig Şampiyonluğu</h5>
+                    <p class="text-secondary mt-2">Türkiye'nin en çok şampiyon olan ve 4 yıldızı takan ilk kulübü.</p>
+                </div>
+            </div>
+
+            <!-- KUTU 5: Avrupa Kupaları -->
+            <div class="col-md-4">
+                <div class="card animasyonlu-kutu p-4 h-100 text-center">
+                    <div class="istatistik-sayi">2</div>
+                    <h5 style="color: #a90429;">Avrupa Kupası</h5>
+                    <p class="text-secondary mt-2">1 UEFA Kupası ve 1 UEFA Süper Kupa müzesinde yer almaktadır.</p>
+                </div>
+            </div>
+
+            <!-- KUTU 6: Yıllık Tarih -->
+            <div class="col-md-4">
+                <div class="card animasyonlu-kutu p-4 h-100 text-center">
+                    <div class="istatistik-sayi">120+</div>
+                    <h5 style="color: #a90429;">Yıllık Kök Tarih</h5>
+                    <p class="text-secondary mt-2">1905'ten günümüze uzanan asırlık tutku ve gelenek.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ALT BİLGİ (FOOTER) -->
+    <footer
+        style="background-color: #111; color: #888; text-align: center; padding: 20px; margin-top: 60px; border-top: 1px solid #333;">
+        <p style="margin: 0;">© 2026 Tüm Hakları Saklıdır | Galatasaray SK</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

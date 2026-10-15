@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galatasaray SK - Galeri</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="resimler/galatasaray.png">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        /* Galeri Kart Stilleri */
+        .galeri-kart {
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
+            border: 1px solid #333;
+            background-color: #1a1a1a;
+            cursor: pointer;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .galeri-kart:hover {
+            transform: translateY(-5px);
+            border-color: #fdb912;
+        }
+
+        .galeri-resim {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .galeri-kart:hover .galeri-resim {
+            transform: scale(1.08);
+        }
+
+        .galeri-baslik {
+            padding: 15px;
+            background-color: #1a1a1a;
+            color: #fff;
+            text-align: center;
+        }
+
+        /* Filtre Butonları Stili */
+        .btn-filtre {
+            color: #fdb912;
+            border: 1px solid #fdb912;
+            background-color: transparent;
+            font-weight: 500;
+        }
+
+        .btn-filtre:hover,
+        .btn-filtre.active {
+            background-color: #fdb912;
+            color: #000;
+        }
+    </style>
+</head>
+
+<body style="background-color: #000000; color: white;">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
+        <div class="container">
+            <a class="navbar-brand" href="sayfa.html" style="color: #fdb912; font-weight: bold;">GALATASARAY</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Menüyü Aç/Kapat">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="sayfa.html">Ana Sayfa</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="hakkımızda.html">Hakkımızda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="galeri.html">Galeri</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="bilet.html">Bilet</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ANA İÇERİK -->
+    <div class="container my-5">
+
+        <!-- Sayfa Başlığı -->
+        <div class="text-center mb-5">
+            <h1 style="color: #fdb912; font-weight: bold; font-size: 42px;">Fotoğraf Galerisi</h1>
+            <p class="text-secondary">Şanlı Tarihimizden ve Unutulmaz Anlarımızdan Kareler</p>
+        </div>
+
+        <!-- Galeri Görselleri Izgarası (Grid) -->
+        <div class="row g-4">
+
+            <!-- Resim 1 -->
+            <div class="col-md-4 col-sm-6">
+                <div class="galeri-kart" data-bs-toggle="modal" data-bs-target="#resimModal"
+                    onclick="resimGoster('resimler/resim1.jpg', 'RAMS Park Stadyum Atmosferi')">
+                    <img src="resimler/resim1.jpg" class="galeri-resim" alt="Stadyum">
+                    <div class="galeri-baslik">
+                        <h6 class="mb-0">RAMS Park Atmosferi</h6>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Resim 2 -->
+            <div class="col-md-4 col-sm-6">
+                <div class="galeri-kart" data-bs-toggle="modal" data-bs-target="#resimModal"
+                    onclick="resimGoster('resimler/resim2.jpg', 'Şampiyonluk Kutlamaları')">
+                    <img src="resimler/resim2.jpg" class="galeri-resim" alt="Şampiyonluk">
+                    <div class="galeri-baslik">
+                        <h6 class="mb-0">Şampiyonluk Kutlaması</h6>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Resim 3 -->
+            <div class="col-md-4 col-sm-6">
+                <div class="galeri-kart" data-bs-toggle="modal" data-bs-target="#resimModal"
+                    onclick="resimGoster('resimler/resim3.jpg', 'Tribün ve Şovlar')">
+                    <img src="resimler/resim3.jpg" class="galeri-resim" alt="Tribün">
+                    <div class="galeri-baslik">
+                        <h6 class="mb-0">Muhteşem Tribün Şovu</h6>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Resim 4 (Mevcut görsellerinizden ekleyebilirsiniz) -->
+            <div class="col-md-4 col-sm-6">
+                <div class="galeri-kart" data-bs-toggle="modal" data-bs-target="#resimModal"
+                    onclick="resimGoster('resimler/resim1.jpg', 'UEFA Kupası Zaferi')">
+                    <img src="resimler/resim1.jpg" class="galeri-resim" alt="Kupa">
+                    <div class="galeri-baslik">
+                        <h6 class="mb-0">Unutulmaz Avrupa Zaferi</h6>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Resim 5 -->
+            <div class="col-md-4 col-sm-6">
+                <div class="galeri-kart" data-bs-toggle="modal" data-bs-target="#resimModal"
+                    onclick="resimGoster('resimler/resim2.jpg', 'Derbi Sevinci')">
+                    <img src="resimler/resim2.jpg" class="galeri-resim" alt="Derbi">
+                    <div class="galeri-baslik">
+                        <h6 class="mb-0">Derbi Galibiyeti Sevinci</h6>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Resim 6 -->
+            <div class="col-md-4 col-sm-6">
+                <div class="galeri-kart" data-bs-toggle="modal" data-bs-target="#resimModal"
+                    onclick="resimGoster('resimler/resim3.jpg', 'Müze Koleksiyonu')">
+                    <img src="resimler/resim3.jpg" class="galeri-resim" alt="Müze">
+                    <div class="galeri-baslik">
+                        <h6 class="mb-0">Galatasaray Müzesi</h6>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- BÜYÜK RESİM PENCERESİ (MODAL) -->
+    <div class="modal fade" id="resimModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content bg-dark text-white border-secondary">
+                <div class="modal-header border-secondary">
+                    <h5 class="modal-title" id="modalBaslik" style="color: #fdb912;">Görsel Detayı</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Kapat"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <img id="modalResim" src="" class="img-fluid rounded" alt="Büyük Görsel">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ALT BİLGİ (FOOTER) -->
+    <footer
+        style="background-color: #111; color: #888; text-align: center; padding: 20px; margin-top: 60px; border-top: 1px solid #333;">
+        <p style="margin: 0;">© 2026 Tüm Hakları Saklıdır | Galatasaray SK</p>
+    </footer>
+
+    <!-- Bootstrap JS & Modal Tetikleme Scripti -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function resimGoster(yol, baslik) {
+            document.getElementById('modalResim').src = yol;
+            document.getElementById('modalBaslik').innerText = baslik;
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html> <!-- Bu dosyanın türü HTML 'dir demek -->
+<html lang="tr">
+
+<head> <!-- Sayfanın arka plan ayarlarının yapıldığı yerdir -->
+
+    <meta charset="UTF-8"> <!-- Bu sitede Türkçe karakterler var -->
+    <title> Giriş Yap </title> <!-- Tarayıcıda görünen sayfa Başlığı -->
+    <link rel="icon" type="image/png" href="resimler/galatasaray.png">
+
+</head>
+
+<!-- Arka plana fotoğraf ekleme ve ekranı kaplama stili -->
+
+<body style="
+    background-image: url('resimler/arka\ plan.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed;
+    color: white;
+    font-family: sans-serif;
+">
+
+    <center style="margin-top: 100px;">
+
+        <!-- Formu daha okunur yapmak için arkasına yarı saydam siyah bir kutu ekledik -->
+        <div
+            style="background-color: rgba(0, 0, 0, 0.75); width: 350px; padding: 30px; border-radius: 15px; border: 1px solid #333;">
+
+            <h1 style="font-size: 32px; color: #fdb912; margin-bottom: 25px;"> Giriş Yap </h1>
+
+            <!-- Kullanıcı Adı Kutusu -->
+            <input type="text" placeholder="Kullanıcı Adı"
+                style="width: 250px; padding: 10px; font-size: 16px; border-radius: 5px; border: none;"><br><br>
+
+            <!-- Şifre Kutusu -->
+            <input type="password" placeholder="Şifre"
+                style="width: 250px; padding: 10px; font-size: 16px; border-radius: 5px; border: none;"><br><br>
+
+            <!-- Giriş Yap Butonu -->
+            <a href="sayfa.html">
+                <input type="button" value="Giriş Yap"
+                    style="font-size: 18px; width: 250px; height: 45px; background-color: #a90429; color: white; border: none; border-radius: 5px; cursor: pointer; font-weight: bold;">
+            </a>
+
+        </div>
+
+    </center>
+
+</body>
+
+</html>
